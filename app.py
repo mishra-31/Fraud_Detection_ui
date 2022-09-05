@@ -13,7 +13,7 @@ image4 = Image.open('width.PNG')
 image = [image1,image4,image2,image4,image3]
 st.image(image)
 
-st.title("Payment Transaction and Fraud Detection")
+st.title("Transaction Fraud Detection")
 merchant_no=st.text_input('Enter Merchant Id')
 terminal_category=st.text_input('Enter Terminal Category')
 amount=st.text_input('Enter Amount')
