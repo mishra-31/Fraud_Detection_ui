@@ -46,11 +46,11 @@ if(st.button('Submit')):
 
     ID=resp.json()['ID']
     alarm_url = "https://api-io.waylay.io/alarms/v1/alarms?source=" + ID
-
+    time.sleep(5)
     resp2 = requests.get(alarm_url, auth=HTTPBasicAuth('e10a0f641bccdafbd954a29a', 'tiUG/cuntOmZN8Qyb/sTckuImIstdM5K'))
 
-    time.sleep(5)
-    print(resp2.json())
+    
+    #print(resp2.json())
     detection = resp2.json()['alarms'][0]['type']
     if detection:
         print(resp2.json()['alarms'][0]['type'])
