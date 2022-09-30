@@ -43,10 +43,11 @@ if(st.button('Submit')):
     headers["Content-Type"] = "application/json"
     resp = requests.post(url, headers=headers, data=data)
     st.write(resp.json())
-
+    
+    time.sleep(10)
     ID=resp.json()['ID']
     alarm_url = "https://api-io.waylay.io/alarms/v1/alarms?source=" + ID
-    time.sleep(5)
+    
     resp2 = requests.get(alarm_url, auth=HTTPBasicAuth('e10a0f641bccdafbd954a29a', 'tiUG/cuntOmZN8Qyb/sTckuImIstdM5K'))
 
     
