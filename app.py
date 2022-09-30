@@ -44,7 +44,7 @@ if(st.button('Submit')):
     resp = requests.post(url, headers=headers, data=data)
     st.write(resp.json())
     
-    time.sleep(5)
+    time.sleep(10)
     ID=resp.json()['ID']
     alarm_url = "https://api-io.waylay.io/alarms/v1/alarms?source=" + ID
     time.sleep(5)
